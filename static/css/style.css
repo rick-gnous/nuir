@@ -1,0 +1,76 @@
+/* Parametres generaux */
+
+* {
+  margin: 0;
+  background-color: #121224;
+}
+
+header {
+  height: 3em;
+  /*padding: 3%;*/
+  padding-left: 20px;
+  margin-bottom: 10%;
+  box-shadow: 0 4px 15px;
+  background-color: #0E0E1B;
+  display: flex;
+}
+
+header * {
+    background-color: #0E0E1B;
+}
+
+header p {
+  padding-top: 1em;
+  margin-right: 1.5em;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  color: white;
+}
+
+/* Parametres pour index */
+
+.pre-art  * {
+    background-color: #0E0E1B;
+}
+
+.pre-art {
+  background-color: #0E0E1B;
+  padding: 2%;
+  padding-bottom: 3%;
+  border: 1px solid darkgray;
+  box-shadow: 1px 1px 5px grey;
+  color: white;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 5%;
+}
+
+.pre-art a {
+  color: white;
+  text-decoration: none;
+}
+
+.summary {
+  margin-bottom: 5%;
+}
+
+.author:link {
+  color: #6A89CC;
+}
+
+.category:link {
+  color: #2DCF29;
+}
+
+.continue:link {
+  background-color: #3C5DA4;
+  border-radius: 50px;
+  padding: 15px;
+}

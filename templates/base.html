@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+    {% block head %}
+    <title> {% block title %}{{ SITENAME }}{% endblock title %}</title>
+    <meta charset="utf-8" />
+    <link rel=stylesheet" href="{{ SITEURL  }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" /> 
+    {% endblock head %}
+</head>
+<body>
+    <header>
+        <p><a href="{{ SITEURL }}/">{{ SITENAME.upper() }}</a></p>
+        {% if DISPLAY_CATEGORIES_ON_MENU %}
+            {% for name, tmp in categories %}
+        <p><a href="{{ SITEURL }}/{{ name.url }}">{{ name }}</a></p>
+            {% endfor %}
+        {% endif %}
+    </header>
+
+    {% block content %}
+    {% endblock content %}
+
+    <footer>
+        Thème principal fait par Eban, j’ai aussi repris des éléments de medius.
+    </footer>
+</body>
+</html>
