@@ -3,7 +3,7 @@
 
 {% for art in articles_page.object_list %}
     <div class="pre-art">
-        <p class=infos-art">Par 
+        <p class="infos-art">Par 
             {% for author in art.authors %}
             <a href="{{ SITEURL }}/{{ author.url }}" class="author">{{ author }}</a>
             {% endfor %}
