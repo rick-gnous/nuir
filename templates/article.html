@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+    <div id="article">
+        <div id="article-header">
+            <p class="infos-art">Par
+                {% for author in article.authors %}
+                <a href="{{ SITEURL }}/{{ author.url }}" class="author">{{ author }}</a>
+                {% endfor %}
+                dans <a href="{{ SITEURL }}/{{ article.category.url }}" class="category">{{ article.category }}</a> le {{ article.date.strftime('%d/%m/%Y') }}.
+            </p>
+            <br />
+            <h1>{{ article.title }}</h1>
+            {% if article.subtitle %}
+            <h2>{{ article.subtitle }}</h2>
+            {% endif %}
+        </div>
+        <div id="article-content">
+            {{ article.content }}
+        </div>
+    </div>
+
+{% endblock content %}

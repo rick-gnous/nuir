@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% import "macros.html" as macro %}
+{% block content %}
+    <div id="cat-header">
+        <h1>{{ category.name }}</h1>
+        <hr />
+    </div>
+
+{{ macro.listArticles(articles_page.object_list) }}
+
+{% endblock content %}
