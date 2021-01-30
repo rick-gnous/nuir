@@ -1,23 +1,7 @@
 {% extends "base.html" %}
+{% import "macros.html" as macro %}
 {% block content %}
 
-{% for art in articles_page.object_list %}
-    <div class="pre-art">
-        <p class="infos-art">Par 
-            {% for author in art.authors %}
-            <a href="{{ SITEURL }}/{{ author.url }}" class="author">{{ author }}</a>
-            {% endfor %}
-            dans <a href="{{ SITEURL }}/{{ art.category.url }}" class="category">{{ art.category }}</a> le 21/08/2020.
-        </p>
-        <br />
-
-        <h2><a href="{{ SITEURL }}/{{ art.url }}">{{ art.title }}</a></h2>
-        <br />
-        <div class="summary">
-            {{ art.summary }}
-        </div>
-        <a href="{{ SITEURL }}/{{ art.url }}" class="continue">Continuer à lire</a>
-    </div>
-{% endfor %}
+{{ macro.listArticles(articles_page.object_list) }}
 
 {% endblock content %}

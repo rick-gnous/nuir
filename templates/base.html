@@ -5,14 +5,17 @@
     <title> {% block title %}{{ SITENAME }}{% endblock title %}</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="{{ SITEURL  }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" /> 
+    <link rel="stylesheet" href="{{ SITEURL  }}/{{ THEME_STATIC_DIR }}/css/style.css" /> 
+    <!-- <link rel="stylesheet" href="{{ SITEURL  }}/{{ THEME_STATIC_DIR }}/css/fort-awesome.css" /> -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
     {% endblock head %}
 </head>
 <body>
     <header>
-        <p><a href="{{ SITEURL }}/">{{ SITENAME.upper() }}</a></p>
+        <a href="{{ SITEURL }}/">{{ SITENAME.upper() }}</a>
         {% if DISPLAY_CATEGORIES_ON_MENU %}
             {% for name, tmp in categories %}
-        <p><a href="{{ SITEURL }}/{{ name.url }}">{{ name }}</a></p>
+        <a href="{{ SITEURL }}/{{ name.url }}">{{ name }}</a>
             {% endfor %}
         {% endif %}
     </header>

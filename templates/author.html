@@ -1,0 +1,21 @@
+{%extends "base.html" %}
+{% import "macros.html" as macro %}
+{% block content %}
+
+    <div id="auth-info">
+        <h1>{{ author.name }}</h1>
+        {% if author|string in NUIR_AUTHORS %}
+        <div id="auth-desc"> 
+        <p>{{ NUIR_AUTHORS.get(author|string).description }}</p>
+        {% for icone, lien in NUIR_AUTHORS.get(author|string).links %}
+        <!-- <a href="{{ lien }}"><i class="icone-{{ icone }}"></i></a> -->
+        <a href="{{ lien }}" class="icone-{{ icone }}"></a>
+        {% endfor %}
+        </div>
+        {% endif %}
+        <!-- <hr /> -->
+    </div>
+
+    {{ macro.listArticles(articles_page.object_list) }}
+
+{% endblock content %}
