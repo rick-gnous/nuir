@@ -14,6 +14,20 @@
             <h2>{{ article.subtitle }}</h2>
             {% endif %}
         </div>
+
+        <div id="article-serie">
+            {% if article.series %}
+            <p>Cet article est le numéro {{ article.series.index }} de la série {{ article.series.name }}.</p>
+            <ol class="parts">
+                {% for part_article in article.series.all %}
+                    <li {% if part_article == article %}class="active"{% endif %}>
+                        <a href='{{ SITEURL }}/{{ part_article.url }}'>{{ part_article.title }}</a>
+                    </li>
+                {% endfor %}
+            </ol>
+            {% endif %}
+        </div>
+
         <div id="article-content">
             {{ article.content }}
         </div>
