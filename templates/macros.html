@@ -18,3 +18,15 @@
     </div>
 {% endfor %}
 {%- endmacro %}
+
+{% macro paginationArt(prev, next) -%}
+    <div id="base-pagenation">
+        {% if prev is not none %} 
+        <p id="base-prev"><a href="{{ SITEURL }}/{{ prev.url }}">Articles récents</a></p>
+        {% endif %}
+
+        {% if next is not none %} 
+        <p id="base-next"><a href="{{ SITEURL }}/{{ next.url }}">Ancients articles</a></p>
+        {% endif %}
+    </div>
+{%- endmacro %}

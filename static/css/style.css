@@ -54,8 +54,26 @@ a {
   color: white;
 }
 
+a:hover {
+  color: #121224;
+  background-color: white;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', sans-serif;
+}
+
+#base-pagenation {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+
+#base-next {
+  text-align: right;
 }
 
 /* Parametres pour macro de prÃ©visualisation dâarticles */
@@ -89,9 +107,19 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
 
+.author:hover {
+  color: #121224;
+  background-color: #6A89CC;
+}
+
 .category:link {
   color: #2DCF29;
   text-decoration: none;
+}
+
+.category:hover {
+  color: #121224;
+  background-color: #2DCF29;
 }
 
 .continue:link {
@@ -206,6 +234,10 @@ pre * {
   font-size: 70px;
   text-decoration: none;
   margin-right: 20px;
+}
+
+[class^="icone-"]:hover {
+  color:grey;
 }
 
 .icone-mastodon:before {
