@@ -54,10 +54,10 @@ a {
   color: white;
 }
 
-a:hover {
+/* a:hover {
   color: #121224;
   background-color: white;
-}
+} */
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', sans-serif;
@@ -84,14 +84,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .pre-art {
   background-color: #0E0E1B;
-  padding: 2%;
-  padding-bottom: 3%;
+  padding: 1em;
+  padding-bottom: 2em;
   border: 1px solid darkgray;
   box-shadow: 1px 1px 5px grey;
   color: white;
   margin-left: 20%;
   margin-right: 20%;
-  margin-bottom: 5%;
+  margin-bottom: 30px;
 }
 
 .summary {
@@ -394,3 +394,15 @@ pre * {
 .highlight .vi { color: #000000; }
 
 .highlight .il { color: #0000cf; font-weight: bold; }
+
+@media (max-width: 800px) {
+  .pre-art {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  
+  #article {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
