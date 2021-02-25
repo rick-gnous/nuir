@@ -193,6 +193,13 @@ h1 {
   margin: 40px auto;
 }
 
+blockquote p {
+  background-color: #1B1B42;
+  padding: 10px;
+  padding-left: 20px;
+  border-left: 5px solid aliceblue
+}
+
 pre, code {
   font-family: DejaVu Sans Mono;
   font-size: 16px;
