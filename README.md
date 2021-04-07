@@ -22,4 +22,7 @@ NUIR_AUTHORS = {
 
 ## Support de plugins
 
-Ce thème ne supporte pour l’instant que le plugin [Series](https://github.com/getpelican/pelican-plugins/tree/master/series).
+Ce thème supporte les plugins suivant :
+
+* [Series](https://github.com/getpelican/pelican-plugins/tree/master/series).
+* [Drafts](https://github.com/noirbizarre/pelican-drafts)
