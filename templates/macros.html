@@ -15,6 +15,14 @@
             {{ art.summary }}
         </div>
         <a href="{{ SITEURL }}/{{ art.url }}" class="continue">Continuer à lire</a>
+        {% if art.tags is not none  %}
+        <hr />
+        <div class="tags">
+            {% for tag in art.tags %}
+            <a href="">{{ tag }}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
     </div>
 {% endfor %}
 {%- endmacro %}
